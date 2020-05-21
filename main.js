@@ -17,7 +17,7 @@ buttonRoll.addEventListener('click', function(){
         let reducer = (accumulator, currentNumber) => accumulator + currentNumber
         let sumOfRolls = dieRolls.reduce(reducer)
         totalAmount.innerHTML = sumOfRolls
-        console.log(dieRolls)
+        
         counter += 1
     }
 })
@@ -27,13 +27,10 @@ buttonTotal.addEventListener('click', function(){
 
     let index = 0
     while(index < dieRolls.length){
-        dieRolls.forEach(function(dieRolls){
-        listOfRolls.innerHTML += '<li>'+ dieRolls + '</li>'
-
-        })
+        
+        listOfRolls.innerHTML += '<li>'+ dieRolls[index] + '</li>'
+        
         index += 1
 }
-
-
-
 })
+
